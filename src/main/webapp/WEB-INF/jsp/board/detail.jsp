@@ -44,10 +44,12 @@
 		})
 	}
 	
+	
 	$(document).ready(function() {
 		getReplyList()
 	})
 
+	
 	$(document).ready(function() {
 		$('#replyAddBtn').click(function() {
 			let content = document.rform.content.value
@@ -74,6 +76,7 @@
 	})
 </script>
 </head>
+
 <body>
 	<div id="section" align="center">
 	<h2>게시판 상세 페이지</h2>

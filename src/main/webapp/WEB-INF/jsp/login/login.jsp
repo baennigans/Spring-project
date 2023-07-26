@@ -14,17 +14,16 @@
 			f.id.focus()
 			return false
 		}		
-		
 		if(f.password.value == '') {
 			alert('패스워드를 입력하세요')
 			f.password.focus()
 			return false
 		}
-		
 		return true
 	}
 </script>
 </head>
+
 <body>
 	<div align="center">
 	<hr>
