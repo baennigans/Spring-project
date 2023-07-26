@@ -13,14 +13,15 @@ public class ReplyServiceImpl implements ReplyService {
 
 	@Autowired
 	private ReplyDAO replyDao;
+
 	
 	@Override
 	public void addReply(ReplyVO reply) {
 
 		replyDao.insertReply(reply);
-		
 	}
 
+	
 	@Override
 	public List<ReplyVO> getReplyList(int boardNo) {
 		return replyDao.selectAllReply(boardNo);

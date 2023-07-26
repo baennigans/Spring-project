@@ -8,6 +8,7 @@
 	<packaging>war</packaging>
 
 	<dependencies>
+	
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -28,7 +29,7 @@
 			<version>2.2</version>
 			<scope>provided</scope>
 		</dependency>
-
+		
 		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
@@ -112,7 +113,6 @@
 			<version>6.2.5.Final</version>
 		</dependency>
 
-
 	</dependencies>
-
+	
 </project>

@@ -9,6 +9,7 @@
 		 values(seq_t_reply_no.nextval, #{boardNo}, #{content}, #{writer})
 	</insert>
 	
+	
 	<select id="selectAll" parameterType="int" resultType="replyVO">
 		select no, board_no boardNo, content, writer
 		     , to_char(reg_date, 'yyyy-mm-dd') as regDate

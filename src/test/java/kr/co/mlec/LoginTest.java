@@ -16,6 +16,7 @@ public class LoginTest {
 	@Autowired
 	private SqlSessionTemplate sqlSession;
 
+	
 	@Test
 	public void 로그인테스트() throws Exception {
 		MemberVO member = new MemberVO();
@@ -25,4 +26,5 @@ public class LoginTest {
 		MemberVO user = sqlSession.selectOne("member.dao.MemberDAO.login", member);
 		System.out.println(user);
 	}
+	
 }

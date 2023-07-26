@@ -11,6 +11,7 @@ public class MemberServiceImpl implements MemberService {
 
 	@Autowired
 	private MemberDAO memberDao;
+
 	
 	@Override
 	public MemberVO login(MemberVO member) {

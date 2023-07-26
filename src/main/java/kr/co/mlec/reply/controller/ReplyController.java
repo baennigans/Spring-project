@@ -16,27 +16,20 @@ public class ReplyController {
 
 	@Autowired
 	private ReplyService replyService;
+
 	
 	@PostMapping("/reply")
 	public void addReply(ReplyVO reply) {
 		replyService.addReply(reply);
 	}
+
 	
 	@GetMapping("/reply/{boardNo}")
 	public List<ReplyVO> getReplyList(@PathVariable("boardNo") int boardNo) {
-		
+
 		List<ReplyVO> replyList = replyService.getReplyList(boardNo);
-		
+
 		return replyList;
 	}
+	
 }
-
-
-
-
-
-
-
-
-
-

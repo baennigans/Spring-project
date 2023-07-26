@@ -18,26 +18,27 @@ public class MemberController {
 	@Autowired
 	private MemberService memberService;
 
+	
 	@GetMapping("/login")
 	public String loginForm() {
 
 		return "login/login";
 	}
 
+	
 	@PostMapping("/login")
 	public String login(MemberVO member, Model model) {
 
 		MemberVO userVO = memberService.login(member);
 		if (userVO == null) {
-			// 로그인 실패
 			return "login/login";
 		}
-		// 로그인 성공
 		model.addAttribute("userVO", userVO);
 
 		return "redirect:/";
 	}
 
+	
 	@GetMapping("/logout")
 	public String logout(SessionStatus status) {
 
@@ -45,4 +46,5 @@ public class MemberController {
 
 		return "redirect:/";
 	}
+	
 }

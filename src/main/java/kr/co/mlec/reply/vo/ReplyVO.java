@@ -8,6 +8,7 @@ public class ReplyVO {
 	private String writer;
 	private String regDate;
 
+	
 	public int getNo() {
 		return no;
 	}
@@ -48,10 +49,11 @@ public class ReplyVO {
 		this.regDate = regDate;
 	}
 
+	
 	@Override
 	public String toString() {
 		return "ReplyVO [no=" + no + ", boardNo=" + boardNo + ", content=" + content + ", writer=" + writer
 				+ ", regDate=" + regDate + "]";
 	}
-	
+
 }

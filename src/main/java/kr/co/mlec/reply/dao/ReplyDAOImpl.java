@@ -13,18 +13,19 @@ public class ReplyDAOImpl implements ReplyDAO {
 
 	@Autowired
 	private SqlSessionTemplate sqlSession;
+
 	
 	@Override
 	public void insertReply(ReplyVO reply) {
 
 		sqlSession.insert("reply.dao.ReplyDAO.insert", reply);
-		
+
 	}
 
+	
 	@Override
 	public List<ReplyVO> selectAllReply(int boardNo) {
-		List<ReplyVO> list 
-			= sqlSession.selectList("reply.dao.ReplyDAO.selectAll", boardNo);
+		List<ReplyVO> list = sqlSession.selectList("reply.dao.ReplyDAO.selectAll", boardNo);
 		return list;
 	}
 
