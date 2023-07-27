@@ -33,7 +33,6 @@ public class BoardController {
 		List<BoardVO> boardList = boardService.getBoardList();
 		request.setAttribute("boardList", boardList);
 		
-	   //return "board/list";
 		return "board/list2";
 	}
 	
