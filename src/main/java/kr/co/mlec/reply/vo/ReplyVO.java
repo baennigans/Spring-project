@@ -52,8 +52,7 @@ public class ReplyVO {
 	
 	@Override
 	public String toString() {
-		return "ReplyVO [no=" + no + ", boardNo=" + boardNo + ", content=" + content + ", writer=" + writer
-				+ ", regDate=" + regDate + "]";
+		return "ReplyVO [no=" + no + ", boardNo=" + boardNo + ", content=" + content + ", writer=" + writer + ", regDate=" + regDate + "]";
 	}
 
 }

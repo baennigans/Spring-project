@@ -17,9 +17,7 @@ public class ReplyDAOImpl implements ReplyDAO {
 	
 	@Override
 	public void insertReply(ReplyVO reply) {
-
 		sqlSession.insert("reply.dao.ReplyDAO.insert", reply);
-
 	}
 
 	

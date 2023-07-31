@@ -26,9 +26,7 @@ public class ReplyController {
 	
 	@GetMapping("/reply/{boardNo}")
 	public List<ReplyVO> getReplyList(@PathVariable("boardNo") int boardNo) {
-
 		List<ReplyVO> replyList = replyService.getReplyList(boardNo);
-
 		return replyList;
 	}
 	

@@ -21,29 +21,24 @@ public class MemberController {
 	
 	@GetMapping("/login")
 	public String loginForm() {
-
 		return "login/login";
 	}
 
 	
 	@PostMapping("/login")
 	public String login(MemberVO member, Model model) {
-
 		MemberVO userVO = memberService.login(member);
 		if (userVO == null) {
 			return "login/login";
 		}
 		model.addAttribute("userVO", userVO);
-
 		return "redirect:/";
 	}
 
 	
 	@GetMapping("/logout")
 	public String logout(SessionStatus status) {
-
 		status.setComplete();
-
 		return "redirect:/";
 	}
 	

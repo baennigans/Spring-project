@@ -29,44 +29,36 @@ public class BoardController {
 	
 	@GetMapping("/board")
 	public String list(HttpServletRequest request) {
-		
 		List<BoardVO> boardList = boardService.getBoardList();
 		request.setAttribute("boardList", boardList);
-		
 		return "board/list2";
 	}
 	
 	
-	// http://localhost:8080/Mission-Spring/board/detail?no=4
+	// http://localhost:8080/Mission-Spring/board/detail?no=62
 	@GetMapping("/board/detail")
 	public String detail(@RequestParam("no") int no, HttpServletRequest request) {
-		
 		System.out.println("no : " + no);
 		BoardVO board = boardService.getBoardByNo(no);
 		request.setAttribute("board", board);
-		
 		return "board/detail";
 	}
 	
 	
-	// http://localhost:8080/Mission-Spring/board/3
+	// http://localhost:8080/Mission-Spring/board/62
 	@GetMapping("/board/{no}")
 	public ModelAndView detail2(@PathVariable("no") int boardNo, HttpServletRequest request) {
-		
 		System.out.println("boardNo : " + boardNo);
 		BoardVO board = boardService.getBoardByNo(boardNo);
-
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("board/detail");
 		mav.addObject("board", board);
-	
 		return mav;
 	}
 	
 	
 	@GetMapping("/board/write")
 	public void writeForm(Model model, HttpSession session) {
-		
 		BoardVO board = new BoardVO();
 		MemberVO userVO = (MemberVO)session.getAttribute("userVO");
 		if(userVO != null) {
@@ -78,13 +70,11 @@ public class BoardController {
 	
 	@PostMapping("/board/write")
 	public String write(@Valid BoardVO board, BindingResult result) {
-		
 		if(result.hasErrors()) {
 			System.out.println("에러발생!!");
 			return "board/write";
 		}
 		boardService.addBoard(board);
-		
 		return "redirect:/board";
 	}
 	
